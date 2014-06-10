@@ -1,4 +1,4 @@
 
-class coralnexus::site::default {
+class project::default {
 
 }

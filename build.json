@@ -1,7 +1,7 @@
 {
   "provisioners": {
     "puppetnode": {
-      "coralnexus::site": {
+      "project": {
         "directory": "puppet",
         "packages": {
           "environment": {
