@@ -1,0 +1,4 @@
+
+class coralnexus::site::default {
+
+}

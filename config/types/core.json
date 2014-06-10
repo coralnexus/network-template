@@ -1,0 +1,5 @@
+{
+  "profiles": [
+    "puppetnode:::coralnexus::core::profile::base"
+  ]
+}

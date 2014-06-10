@@ -1,0 +1,103 @@
+{
+  "settings": {
+    "ruby_dev": {
+      "shares": {
+        "gems": {
+          "type": "nfs",
+          "local": "share/gems",
+          "remote": "/var/lib/gems/1.9.1/gems",
+          "bindfs": {
+            "owner": "root",
+            "group": "root",
+            "perms": "u=rwx:g=rwx:o=rwx",
+            "create-as-user": true,
+            "chown-ignore": true,
+            "chgrp-ignore": true,
+            "chmod-ignore": true,
+            "o": "nonempty"
+          }
+        }
+      }
+    },
+    "vagrant": {
+      "vm": {
+        "providers": {
+          "virtualbox": {
+            "customize": {
+              "modifyvm": ":id",
+              "--cpuexecutioncap": "50",
+              "--cpus": "1",
+              "--memory": "1024",
+              "--natdnshostresolver1": "on",
+              "--natdnsproxy1": "on"
+            }
+          }
+        }
+      },
+      "shares": {
+        "corl_properties": {
+          "type": "nfs",
+          "local": "share/log/corl",
+          "remote": "/var/log/corl",
+          "bindfs": {
+            "owner": "root",
+            "group": "root",
+            "perms": "u=rwx:g=rwx:o=rwx",
+            "create-as-user": true,
+            "chown-ignore": true,
+            "chgrp-ignore": true,
+            "chmod-ignore": true
+          }
+        }
+      }
+    },
+    "vagrant_puppet": {
+      "shares": {
+        "puppet_reports": {
+          "type": "nfs",
+          "local": "share/log/puppet",
+          "remote": "/var/log/puppet/reports",
+          "bindfs": {
+            "owner": "root",
+            "group": "root",
+            "perms": "u=rwx:g=rwx:o=rwx",
+            "create-as-user": true,
+            "chown-ignore": true,
+            "chgrp-ignore": true,
+            "chmod-ignore": true
+          }
+        },
+        "puppet_lib_reports": {
+          "type": "nfs",
+          "local": "share/lib/puppet/reports",
+          "remote": "/var/lib/puppet/reports",
+          "bindfs": {
+            "owner": "root",
+            "group": "root",
+            "perms": "u=rwx:g=rwx:o=rwx",
+            "create-as-user": true,
+            "chown-ignore": true,
+            "chgrp-ignore": true,
+            "chmod-ignore": true,
+            "o": "nonempty"
+          }
+        },
+        "puppet_lib_state": {
+          "type": "nfs",
+          "local": "share/lib/puppet/state",
+          "remote": "/var/lib/puppet/state",
+          "bindfs": {
+            "owner": "root",
+            "group": "root",
+            "perms": "u=rwx:g=rwx:o=rwx",
+            "create-as-user": true,
+            "chown-ignore": true,
+            "chgrp-ignore": true,
+            "chmod-ignore": true,
+            "o": "nonempty"
+          }
+        }
+      }
+    }
+  }
+}

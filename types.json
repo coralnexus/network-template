@@ -1,0 +1,13 @@
+{
+  "settings": {
+    "type_vagrant_core": {
+      "settings": [
+        "vagrant_core"
+      ],
+      "facts": {
+        "corl_environment": "development",
+        "corl_type": "core"
+      }
+    }
+  }
+}

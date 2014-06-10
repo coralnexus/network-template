@@ -1,0 +1,53 @@
+{
+  "users::user_label": "Template Vagrant account",
+  "users::user_email": "someone@example.com",
+  "users::root_label": "Admin (Vagrant admin)",
+  "users::root_email": "someone@example.com",
+  "users::known_hosts": [ "github.com" ],
+  "git::git_label": "Admin (Vagrant git account)",
+  "git::git_email": "someone@example.com",
+  "git::allowed_ssh_key": "",
+  "git::public_ssh_key": "",
+  "git::private_ssh_key": "",
+  "git::root_config": {
+    "github": {
+      "user": "example"
+    }
+  },
+  "git::file": {
+    "vagrant_gitconfig": {
+      "path": "/home/vagrant/.gitconfig",
+      "content": {
+        "user": {
+          "name": "Vagrant development account",
+          "email": "someone@example.com"
+        }
+      }
+    }
+  },
+  "users::conf::vagrant::private::keys::file": {
+    "github": {
+      "path": "id_github",
+      "content": ""
+    }
+  },
+  "users::conf::vagrant::public::keys::file": {
+    "github": {
+      "path": "id_github.pub",
+      "content": ""
+    }
+  },
+  "users::conf::vagrant::file": {
+    "ssh_conf": {
+      "content": {
+        "Host": {
+          "github.com": {
+            "StrictHostKeyChecking": "no",
+            "Identityfile": "~/.ssh/id_github"
+          }
+        }
+      }
+    }
+  },
+  "nullmailer::service_ensure": "stopped"
+}
