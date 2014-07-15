@@ -2,12 +2,16 @@
   "settings": {
     "local": {
       "facts": {
+        "corl_identity": "test",
+        "corl_environment": "development",
         "corl_stage": "initialize",
         "corl_type": "local"
       }
     },
     "server": {
       "facts": {
+        "corl_identity": "test",
+        "corl_environment": "development",
         "corl_stage": "initialize",
         "corl_type": "server"
       }

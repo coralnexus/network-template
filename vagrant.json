@@ -23,6 +23,7 @@
       "facts": {
         "corl_identity": "test",
         "corl_environment": "development",
+        "corl_stage": "initialize",
         "corl_type": "core"
       },
       "vm": {
