@@ -1,21 +1,23 @@
 {
+  "builders": {
+    "package": {
+      "environment": {
+        "production": {
+          "coralnexus__core": "github:::coralnexus/corl-package-core[9e1ef09e89e4a6332bb25a4947914a693a50af6e]"
+        },
+        "qa": {
+          "use": "production"
+        },
+        "default": {
+          "coralnexus__core": "github:::coralnexus/corl-package-core"
+        }
+      }
+    }
+  },
   "provisioners": {
     "puppetnode": {
       "project": {
-        "directory": "puppet",
-        "packages": {
-          "environment": {
-            "production": {
-              "coralnexus::core": "github:::coralnexus/corl-package-core[908f334f22b13f9ea3d32d5aac8fee1aedd62e6d]"
-            },
-            "qa": {
-              "use": "production"
-            },
-            "default": {
-              "coralnexus::core": "github:::coralnexus/corl-package-core"
-            }
-          }
-        }
+        "directory": "puppet"
       }
     }
   }
