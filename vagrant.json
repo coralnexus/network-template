@@ -20,6 +20,11 @@
       }
     },
     "vagrant": {
+      "facts": {
+        "corl_identity": "test",
+        "corl_environment": "development",
+        "corl_type": "core"
+      },
       "vm": {
         "providers": {
           "virtualbox": {
