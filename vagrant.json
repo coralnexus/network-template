@@ -5,7 +5,7 @@
         "gems": {
           "type": "nfs",
           "local": "share/gems",
-          "remote": "/var/lib/gems/1.9.1/gems",
+          "remote": "/usr/local/lib/ruby/gems/2.1.0",
           "bindfs": {
             "owner": "root",
             "group": "root",
