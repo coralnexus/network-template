@@ -45,3 +45,4 @@ build
 # -- Everything after this point is managed by CORL
 # CORL ignores
 .corl
+.project_cache
