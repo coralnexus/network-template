@@ -46,4 +46,3 @@ build
 # CORL ignores
 .corl
 .project_cache
-config/identities
